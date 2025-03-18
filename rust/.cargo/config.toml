@@ -1,0 +1,23 @@
+[target.aarch64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
+linker = "aarch64-linux-android24-clang"
+
+[target.armv7-linux-androideabi]
+rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
+linker = "armv7a-linux-androideabi24-clang"
+
+[target.i686-linux-android]
+rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
+linker = "i686-linux-android24-clang"
+
+[target.x86_64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
+linker = "x86_64-linux-android24-clang"
+
+[target.aarch64-apple-ios]
+linker = "clang"
+ar = "ar"
+
+[target.x86_64-apple-ios]
+linker = "clang"
+ar = "ar"

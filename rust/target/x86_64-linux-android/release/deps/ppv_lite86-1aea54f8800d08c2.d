@@ -1,0 +1,11 @@
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-linux-android/release/deps/libppv_lite86-1aea54f8800d08c2.rmeta: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/soft.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/types.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-linux-android/release/deps/libppv_lite86-1aea54f8800d08c2.rlib: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/soft.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/types.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-linux-android/release/deps/ppv_lite86-1aea54f8800d08c2.d: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/soft.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/types.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/sse2.rs
+
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/lib.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/soft.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/types.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/mod.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/ppv-lite86-0.2.21/src/x86_64/sse2.rs:

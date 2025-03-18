@@ -1,0 +1,15 @@
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/debug/deps/libanyhow-a2c6ed4e34c284ce.rmeta: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/backtrace.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/chain.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/context.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ensure.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/error.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/fmt.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/kind.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/macros.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ptr.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/wrapper.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/debug/deps/anyhow-a2c6ed4e34c284ce.d: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/backtrace.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/chain.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/context.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ensure.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/error.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/fmt.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/kind.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/macros.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ptr.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/wrapper.rs
+
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/lib.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/backtrace.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/chain.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/context.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ensure.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/error.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/fmt.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/kind.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/macros.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/ptr.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/anyhow-1.0.97/src/wrapper.rs:

@@ -1,0 +1,12 @@
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/debug/deps/liblibc-9a55827f22feaa05.rmeta: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/macros.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/primitives.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/aarch64/mod.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/debug/deps/libc-9a55827f22feaa05.d: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/macros.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/primitives.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/mod.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/aarch64/mod.rs
+
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/lib.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/macros.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/primitives.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/mod.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/mod.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/mod.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/mod.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/libc-0.2.171/src/unix/bsd/apple/b64/aarch64/mod.rs:

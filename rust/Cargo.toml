@@ -1,0 +1,14 @@
+[package]
+name = "rust_log4rs_demo2"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rust_log4rs_demo2"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+log = "0.4"
+log4rs = "1.2"
+serde = { version = "1.0", features = ["derive"] }
+libc = "0.2" 

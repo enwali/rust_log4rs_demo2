@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - rust_log4rs_demo2 (0.1.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - rust_log4rs_demo2 (from `../rust`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  rust_log4rs_demo2:
+    :path: "../rust"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
+  rust_log4rs_demo2: c96f2ec77dedddb3b16b3b8ea057c4cb2ed920e6
+
+PODFILE CHECKSUM: 4cf7d2e5a3d8d0c057eadb4395856a57bb911466
+
+COCOAPODS: 1.15.2

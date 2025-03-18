@@ -1,23 +1,19 @@
-[target.aarch64-linux-android]
-rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
-linker = "aarch64-linux-android24-clang"
-
-[target.armv7-linux-androideabi]
-rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
-linker = "armv7a-linux-androideabi24-clang"
-
-[target.i686-linux-android]
-rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
-linker = "i686-linux-android24-clang"
-
-[target.x86_64-linux-android]
-rustflags = ["-C", "link-arg=-Wl,--no-rosegment"]
-linker = "x86_64-linux-android24-clang"
-
 [target.aarch64-apple-ios]
-linker = "clang"
-ar = "ar"
+rustflags = [
+    "-C", "link-arg=-arch",
+    "-C", "link-arg=arm64",
+    "-C", "link-arg=-isysroot",
+    "-C", "link-arg=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk"
+]
+linker = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+ar = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"
 
 [target.x86_64-apple-ios]
-linker = "clang"
-ar = "ar"
+rustflags = [
+    "-C", "link-arg=-arch",
+    "-C", "link-arg=x86_64",
+    "-C", "link-arg=-isysroot",
+    "-C", "link-arg=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator17.4.sdk"
+]
+linker = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+ar = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"

@@ -112,11 +112,6 @@ mkdir -p rust/target/android/armeabi-v7a/release
 mkdir -p rust/target/android/x86/release
 mkdir -p rust/target/android/x86_64/release
 
-mkdir -p android/app/src/main/jniLibs/arm64-v8a
-mkdir -p android/app/src/main/jniLibs/armeabi-v7a
-mkdir -p android/app/src/main/jniLibs/x86
-mkdir -p android/app/src/main/jniLibs/x86_64
-
 # Build for Android
 echo "Building for Android..."
 cd rust
@@ -127,7 +122,6 @@ ANDROID_TARGET=aarch64-linux-android
 if cargo build --release --target $ANDROID_TARGET; then
     echo "✅ Build successful for $ANDROID_TARGET"
     cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so target/android/arm64-v8a/release/
-    cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so ../android/app/src/main/jniLibs/arm64-v8a/
 else
     echo "❌ Build failed for $ANDROID_TARGET"
 fi
@@ -138,7 +132,6 @@ ANDROID_TARGET=armv7-linux-androideabi
 if cargo build --release --target $ANDROID_TARGET; then
     echo "✅ Build successful for $ANDROID_TARGET"
     cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so target/android/armeabi-v7a/release/
-    cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so ../android/app/src/main/jniLibs/armeabi-v7a/
 else
     echo "❌ Build failed for $ANDROID_TARGET"
 fi
@@ -149,7 +142,6 @@ ANDROID_TARGET=i686-linux-android
 if cargo build --release --target $ANDROID_TARGET; then
     echo "✅ Build successful for $ANDROID_TARGET"
     cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so target/android/x86/release/
-    cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so ../android/app/src/main/jniLibs/x86/
 else
     echo "❌ Build failed for $ANDROID_TARGET"
 fi
@@ -160,10 +152,10 @@ ANDROID_TARGET=x86_64-linux-android
 if cargo build --release --target $ANDROID_TARGET; then
     echo "✅ Build successful for $ANDROID_TARGET"
     cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so target/android/x86_64/release/
-    cp target/$ANDROID_TARGET/release/librust_log4rs_demo2.so ../android/app/src/main/jniLibs/x86_64/
 else
     echo "❌ Build failed for $ANDROID_TARGET"
 fi
 
 echo "Android build completed!"
+echo "Run 'flutter build apk' to create the Android app with the compiled Rust libraries."
 cd .. 

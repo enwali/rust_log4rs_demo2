@@ -1,0 +1,11 @@
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-apple-ios/release/deps/libgetrandom-4a6370da0fca78a3.rmeta: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/util.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error_impls.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/apple-other.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-apple-ios/release/deps/libgetrandom-4a6370da0fca78a3.rlib: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/util.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error_impls.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/apple-other.rs
+
+/Users/enlee/code/project/rust/rust_log4rs_demo2/rust/target/x86_64-apple-ios/release/deps/getrandom-4a6370da0fca78a3.d: /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/lib.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/util.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error_impls.rs /Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/apple-other.rs
+
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/lib.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/util.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/error_impls.rs:
+/Users/enlee/.cargo/registry/src/rsproxy.cn-0dccff568467c15b/getrandom-0.2.15/src/apple-other.rs:

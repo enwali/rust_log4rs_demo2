@@ -71,26 +71,43 @@ android {
 
     // Add task to copy compiled Rust libraries
     tasks.register('copyRustLibs', Copy) {
-        from '../../rust/target/android/armeabi-v7a/release/librust_log4rs_demo2.so'
-        from '../../rust/target/android/arm64-v8a/release/librust_log4rs_demo2.so'
-        from '../../rust/target/android/x86/release/librust_log4rs_demo2.so'
-        from '../../rust/target/android/x86_64/release/librust_log4rs_demo2.so'
-        into 'src/main/jniLibs'
-
-        // Create destination directories
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+        
+        // Create destination directories first
         doFirst {
             file('src/main/jniLibs/armeabi-v7a').mkdirs()
             file('src/main/jniLibs/arm64-v8a').mkdirs()
             file('src/main/jniLibs/x86').mkdirs()
             file('src/main/jniLibs/x86_64').mkdirs()
         }
+        
+        // Copy each architecture's library to the correct directory
+        from('../../rust/target/android/arm64-v8a/release/librust_log4rs_demo2.so') {
+            into 'arm64-v8a'
+        }
+        from('../../rust/target/android/armeabi-v7a/release/librust_log4rs_demo2.so') {
+            into 'armeabi-v7a'
+        }
+        from('../../rust/target/android/x86/release/librust_log4rs_demo2.so') {
+            into 'x86'
+        }
+        from('../../rust/target/android/x86_64/release/librust_log4rs_demo2.so') {
+            into 'x86_64'
+        }
+        
+        into 'src/main/jniLibs'
     }
     
     // Run task before build
     tasks.whenTaskAdded { task ->
-        if (task.name == 'assembleDebug') {
+        if (task.name == 'assembleDebug' || task.name == 'assembleRelease') {
             task.dependsOn 'copyRustLibs'
         }
+    }
+    
+    // Make preBuild depend on copyRustLibs to ensure libraries are ready
+    tasks.named('preBuild') {
+        dependsOn 'copyRustLibs'
     }
 }
 

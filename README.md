@@ -77,6 +77,12 @@ flutter build ios  # For iOS
 - If you get an error about missing Android toolchain, make sure your NDK is installed correctly and the path is set properly in the build script.
 - The error `error: linker 'aarch64-linux-android24-clang' not found` means the build script can't find the Android NDK toolchain. Update the `ANDROID_NDK_HOME` path in the build scripts.
 
+### Gradle Build Issues
+
+- If you encounter an error like `Execution failed for task ':app:copyRustLibs'. > Entry librust_log4rs_demo2.so is a duplicate but no duplicate handling strategy has been set`, it means the Gradle copy task is finding duplicate library files. This has been fixed in the current build, but if it happens again, make sure:
+  1. Each architecture's library is copied to its own directory
+  2. Add `duplicatesStrategy = DuplicatesStrategy.INCLUDE` to the copy task in `android/app/build.gradle`
+
 ### Rust Compilation Issues
 
 - If you're getting errors about missing targets, make sure you've added the required targets using rustup:

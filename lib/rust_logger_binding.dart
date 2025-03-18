@@ -21,86 +21,165 @@ typedef LogError = void Function(Pointer<Utf8>);
 
 class RustLogger {
   static DynamicLibrary? _dylib;
+  // 标记是否是调试模式，当找不到符号时会打印更多日志
+  static const bool _debug = true;
 
   static DynamicLibrary _loadLibrary() {
     if (_dylib != null) {
       return _dylib!;
     }
 
-    if (Platform.isAndroid) {
-      _dylib = DynamicLibrary.open('librust_log4rs_demo2.so');
-    } else if (Platform.isIOS) {
-      _dylib = DynamicLibrary.process();
-    } else {
-      throw UnsupportedError('Unsupported platform: ${Platform.operatingSystem}');
+    try {
+      if (Platform.isAndroid) {
+        // Android上加载动态库文件
+        _dylib = DynamicLibrary.open('librust_log4rs_demo2.so');
+        if (_debug) print('已加载Android动态库');
+      } else if (Platform.isIOS) {
+        // iOS上直接使用进程空间中的符号
+        _dylib = DynamicLibrary.process();
+        
+        // 这一行会抛出异常如果符号不存在
+        if (_debug) {
+          try {
+            _dylib!.lookup('init_logger');
+            print('成功在进程空间找到init_logger符号');
+          } catch (e) {
+            print('警告: 在进程空间无法找到init_logger符号');
+            // 继续执行，可能是其他符号存在
+          }
+        }
+      } else {
+        throw UnsupportedError('不支持的平台: ${Platform.operatingSystem}');
+      }
+    } catch (e) {
+      print('加载Rust库时出错: $e');
+      rethrow;
     }
+    
     return _dylib!;
   }
 
-  static final InitLogger _initLogger = _loadLibrary()
-      .lookupFunction<InitLoggerNative, InitLogger>('init_logger');
+  // 使用懒加载方式查找函数，避免在初始化时就查找所有函数
+  static InitLogger? _cachedInitLogger;
+  static InitLogger get _initLogger {
+    _cachedInitLogger ??= _loadLibrary()
+        .lookupFunction<InitLoggerNative, InitLogger>('init_logger');
+    return _cachedInitLogger!;
+  }
 
-  static final LogInfo _logInfo = _loadLibrary()
-      .lookupFunction<LogInfoNative, LogInfo>('log_info');
+  static LogInfo? _cachedLogInfo;
+  static LogInfo get _logInfo {
+    _cachedLogInfo ??= _loadLibrary()
+        .lookupFunction<LogInfoNative, LogInfo>('log_info');
+    return _cachedLogInfo!;
+  }
 
-  static final LogDebug _logDebug = _loadLibrary()
-      .lookupFunction<LogDebugNative, LogDebug>('log_debug');
+  static LogDebug? _cachedLogDebug;
+  static LogDebug get _logDebug {
+    _cachedLogDebug ??= _loadLibrary()
+        .lookupFunction<LogDebugNative, LogDebug>('log_debug');
+    return _cachedLogDebug!;
+  }
 
-  static final LogWarn _logWarn = _loadLibrary()
-      .lookupFunction<LogWarnNative, LogWarn>('log_warn');
+  static LogWarn? _cachedLogWarn;
+  static LogWarn get _logWarn {
+    _cachedLogWarn ??= _loadLibrary()
+        .lookupFunction<LogWarnNative, LogWarn>('log_warn');
+    return _cachedLogWarn!;
+  }
 
-  static final LogError _logError = _loadLibrary()
-      .lookupFunction<LogErrorNative, LogError>('log_error');
+  static LogError? _cachedLogError;
+  static LogError get _logError {
+    _cachedLogError ??= _loadLibrary()
+        .lookupFunction<LogErrorNative, LogError>('log_error');
+    return _cachedLogError!;
+  }
 
-  /// Initialize the Rust logger with a file path
+  /// 初始化Rust日志器，指定日志文件路径
   /// 
-  /// [logFilePath] is the absolute path to the log file
+  /// [logFilePath] 是日志文件的绝对路径
   static bool initLogger(String logFilePath) {
-    final pathPointer = logFilePath.toNativeUtf8();
     try {
-      return _initLogger(pathPointer);
-    } finally {
-      malloc.free(pathPointer);
+      final pathPointer = logFilePath.toNativeUtf8();
+      try {
+        return _initLogger(pathPointer);
+      } catch (e) {
+        print('初始化Rust日志器时出错: $e');
+        return false;
+      } finally {
+        malloc.free(pathPointer);
+      }
+    } catch (e) {
+      print('初始化Rust日志器时出错: $e');
+      return false;
     }
   }
 
-  /// Log a message at the info level
-  static void info(String message) {
-    final messagePointer = message.toNativeUtf8();
-    try {
-      _logInfo(messagePointer);
-    } finally {
-      malloc.free(messagePointer);
-    }
-  }
-
-  /// Log a message at the debug level
+  /// 记录debug级别的日志消息
   static void debug(String message) {
-    final messagePointer = message.toNativeUtf8();
     try {
-      _logDebug(messagePointer);
-    } finally {
-      malloc.free(messagePointer);
+      final messagePointer = message.toNativeUtf8();
+      try {
+        _logDebug(messagePointer);
+      } catch (e) {
+        print('记录debug日志时出错: $e');
+        print('原始消息: $message');
+      } finally {
+        malloc.free(messagePointer);
+      }
+    } catch (e) {
+      print('记录debug日志时出错: $e');
     }
   }
 
-  /// Log a message at the warn level
+  /// 记录info级别的日志消息
+  static void info(String message) {
+    try {
+      final messagePointer = message.toNativeUtf8();
+      try {
+        _logInfo(messagePointer);
+      } catch (e) {
+        print('记录info日志时出错: $e');
+        print('原始消息: $message');
+      } finally {
+        malloc.free(messagePointer);
+      }
+    } catch (e) {
+      print('记录info日志时出错: $e');
+    }
+  }
+
+  /// 记录warn级别的日志消息
   static void warn(String message) {
-    final messagePointer = message.toNativeUtf8();
     try {
-      _logWarn(messagePointer);
-    } finally {
-      malloc.free(messagePointer);
+      final messagePointer = message.toNativeUtf8();
+      try {
+        _logWarn(messagePointer);
+      } catch (e) {
+        print('记录warn日志时出错: $e');
+        print('原始消息: $message');
+      } finally {
+        malloc.free(messagePointer);
+      }
+    } catch (e) {
+      print('记录warn日志时出错: $e');
     }
   }
 
-  /// Log a message at the error level
+  /// 记录error级别的日志消息
   static void error(String message) {
-    final messagePointer = message.toNativeUtf8();
     try {
-      _logError(messagePointer);
-    } finally {
-      malloc.free(messagePointer);
+      final messagePointer = message.toNativeUtf8();
+      try {
+        _logError(messagePointer);
+      } catch (e) {
+        print('记录error日志时出错: $e');
+        print('原始消息: $message');
+      } finally {
+        malloc.free(messagePointer);
+      }
+    } catch (e) {
+      print('记录error日志时出错: $e');
     }
   }
 } 
